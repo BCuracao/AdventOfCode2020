@@ -16,14 +16,14 @@ func main() {
 	}
 	r := 0
 	for _, s := range strings.Split(string(f), "\n\n") {
-		if checkSubstrings(s) {
+		if checkValid(s) {
 			r++
 		}
 	}
 	fmt.Println(r)
 }
 
-func checkSubstrings(s string) bool {
+func checkValid(s string) bool {
 	for _, n := range strings.Split(VALID, ",") {
 		if !strings.Contains(s, n) {
 			return false
